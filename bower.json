@@ -1,0 +1,23 @@
+{
+  "name": "angular-seed",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Saikat Halder <iamdevsaikat@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/iamSaikat/angular-seed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "./src/assets/vendor"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "simple-line-icons": "^2.3.2",
+    "owl.carousel": "^2.3.3"
+  }
+}
