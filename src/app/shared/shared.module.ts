@@ -1,13 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { NavComponent } from './Nav/Nav.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
-  declarations: [NavComponent],
-  exports: [NavComponent]
+  exports: [
+    MaterialModule
+  ]
 })
-export class SharedModule { }
+export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule
+    };
+  }
+ }
