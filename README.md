@@ -1,6 +1,6 @@
 # Angular Seed Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 This project contains CoreModule, SharedModule and Lazyloading Routing (Nested Routes).
 
