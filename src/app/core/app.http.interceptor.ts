@@ -1,20 +1,19 @@
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
-import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
+  HttpResponse,
   HttpErrorResponse
 } from '@angular/common/http';
-import { Router } from '@angular/router';
-
-
-
 
 import { AuthService } from './auth.service';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 
 
@@ -34,6 +33,23 @@ export class AppHttpInterceptor implements HttpInterceptor {
       url: `${environment.api.rooturl}/${request.url}`
     });
 
-    return next.handle(authRequest);
+    return next.handle(authRequest)
+    .pipe(
+      tap(event => {
+        if (event instanceof HttpResponse) {
+          // console.log(' all looks good');
+          // http response status code
+          // console.log(event.status);
+          return event;
+        }
+      }, error => {
+       // http response status code
+       if (error instanceof HttpErrorResponse) {
+        if (error.status === 401) {
+          console.error('Error status code:', error);
+        }
+    }
+      })
+    );
   }
 }
