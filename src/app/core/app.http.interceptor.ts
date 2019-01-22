@@ -44,9 +44,13 @@ export class AppHttpInterceptor implements HttpInterceptor {
         }
       }, error => {
        // http response status code
-       if (error instanceof HttpErrorResponse) {
-        if (error.status === 401) {
-          console.error('Error status code:', error);
+        if (error instanceof HttpErrorResponse) {
+          // use userService to handel user login and logout
+          // const userService = this.injector.get(UserService);
+          if (error.status > 400 && error.status < 500) {
+            console.error('Error status code:', error);
+            // userService.logout();
+          }
         }
     }
       })
