@@ -1,12 +1,8 @@
 # Angular Seed Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.
 
 This project contains CoreModule, SharedModule and Lazyloading Routing (Nested Routes).
-
-## Links:
-
-[Live Preview](https://angular-pwa.netlify.com/)
 
 ## Development server
 
