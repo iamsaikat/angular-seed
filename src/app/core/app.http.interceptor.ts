@@ -42,6 +42,7 @@ export class AppHttpInterceptor implements HttpInterceptor {
           // console.log(event.status);
           return event;
         }
+        return event;
       }, error => {
        // http response status code
         if (error instanceof HttpErrorResponse) {

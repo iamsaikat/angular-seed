@@ -11,7 +11,7 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  getToken(): string {
+  getToken() {
     return localStorage.getItem('token');
   }
 
@@ -19,7 +19,7 @@ export class AuthService {
     localStorage.clear();
   }
 
-  setAuth(user) {
+  setAuth(user: any) {
     localStorage.setItem('token', user.token);
   }
 }

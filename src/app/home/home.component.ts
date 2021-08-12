@@ -24,10 +24,6 @@ export class HomeComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
 
   constructor() { }
 

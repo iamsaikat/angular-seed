@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -14,15 +17,14 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/font-awesome/scss/font-awesome.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -69,11 +71,10 @@
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.scss",
-              "node_modules/font-awesome/scss/font-awesome.scss"
+              "src/styles.scss"
             ],
             "assets": [
               "src/assets",
@@ -85,8 +86,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
