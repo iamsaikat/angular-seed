@@ -1,3 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+$custom-file-text: (); // --> Warning: 1 rules skipped due to selector errors: .custom-file-input:lang(en) ~ .custom-file-label -> unmatched pseudo-class :lang
 @import '~bootstrap/scss/bootstrap.scss';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
